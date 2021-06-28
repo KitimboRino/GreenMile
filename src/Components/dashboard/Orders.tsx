@@ -14,8 +14,8 @@ function createData(id: number, date: any, name: string, location: string, addre
 }
 
 const rows = [
-  createData(0, '16 Mar, 2019', 'Rino Kitimbo', 'Gulu', 'Kampala', 10, 2),
-  createData(1, '16 Mar, 2019', 'Philipo Kiwemba', 'Mbale', 'Jinja', 5, 5),
+  createData(0, '16 Mar, 2021', 'Rino Kitimbo', 'Gulu', 'Kampala', 10, 2),
+  createData(1, '16 Mar, 2021', 'Philipo Kiwemba', 'Mbale', 'Jinja', 5, 5),
 ];
 
 function preventDefault(event:any) {

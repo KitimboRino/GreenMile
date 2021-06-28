@@ -7,48 +7,63 @@ import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import PeopleIcon from '@material-ui/icons/People';
 import BarChartIcon from '@material-ui/icons/BarChart';
 import LayersIcon from '@material-ui/icons/Layers';
+import SettingsIcon from '@material-ui/icons/Settings';
+import AssignmentOutlinedIcon from '@material-ui/icons/AssignmentOutlined';
 
 export const mainListItems = (
   <div>
+    {/* Overview */}
     <ListItem button>
       <ListItemIcon>
         <DashboardIcon />
       </ListItemIcon>
       <ListItemText primary='Overview' />
     </ListItem>
+
+    {/* Suppliers */}
     <ListItem button>
       <ListItemIcon>
         <ShoppingCartIcon />
       </ListItemIcon>
       <ListItemText primary='Suppliers' />
     </ListItem>
+
+    {/* Loaders */}
     <ListItem button>
       <ListItemIcon>
         <PeopleIcon />
       </ListItemIcon>
-      <ListItemText primary='Orders' />
+      <ListItemText primary='Loaders' />
     </ListItem>
+
+    {/* Invoices */}
     <ListItem button>
       <ListItemIcon>
         <BarChartIcon />
       </ListItemIcon>
       <ListItemText primary='Invoices' />
     </ListItem>
+
+    {/* Activities */}
     <ListItem button>
       <ListItemIcon>
         <LayersIcon />
       </ListItemIcon>
       <ListItemText primary='Activities' />
     </ListItem>
+
+    {/* Articles */}
     <ListItem button>
       <ListItemIcon>
-        <LayersIcon />
+        <AssignmentOutlinedIcon />
       </ListItemIcon>
       <ListItemText primary='Articles' />
     </ListItem>
+
+    {/* Settings */}
     <ListItem button>
       <ListItemIcon>
-        <LayersIcon />
+        <SettingsIcon />
       </ListItemIcon>
       <ListItemText primary='Settings' />
     </ListItem>
