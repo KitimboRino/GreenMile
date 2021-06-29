@@ -13,29 +13,28 @@ import IconButton from '@material-ui/core/IconButton';
 import Badge from '@material-ui/core/Badge';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
-// import Paper from '@material-ui/core/Paper';
+import Paper from '@material-ui/core/Paper';
 import Link from '@material-ui/core/Link';
 import MenuIcon from '@material-ui/icons/Menu';
-
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
-import { mainListItems } from './listItems';
-// import Chart from './Chart';
+import { mainListItems } from '../components/dashboard/listItems';
+import Chart from '../components/dashboard/Chart';
 // import Deliveries from './Deliveries';
 // import Orders from './Orders';
 
-// function Copyright() {
-//   return (
-//     <Typography variant="body2" color="textSecondary" align="center">
-//       {'Copyright © '}
-//       <Link color="inherit" href="https://material-ui.com/">
-//         Green Mile
-//       </Link>{' '}
-//       {new Date().getFullYear()}
-//       {'.'}
-//     </Typography>
-//   );
-// }
+function Copyright() {
+  return (
+    <Typography variant="body2" color="textSecondary" align="center">
+      {'Copyright © '}
+      <Link color="inherit" href="https://material-ui.com/">
+        Green Mile
+      </Link>{' '}
+      {new Date().getFullYear()}
+      {'.'}
+    </Typography>
+  );
+}
 
 const drawerWidth = 240;
 
@@ -52,8 +51,8 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'flex-end',
     padding: '0 8px',
     ...theme.mixins.toolbar,
-  }, 
-  
+  },
+
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
     transition: theme.transitions.create(['width', 'margin'], {
@@ -128,7 +127,7 @@ export default function Dashboard() {
   const handleDrawerClose = () => {
     setOpen(false);
   };
-  // const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
+  const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
 
   return (
     <div className={classes.root}>
@@ -169,32 +168,27 @@ export default function Dashboard() {
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}>
-          <Grid container spacing={3}>
+          <Grid container spacing={2}>
 
             {/* Chart */}
-            {/* <Grid item xs={12} md={4} lg={9}>
+            <Grid item xs={10}>
               <Paper className={fixedHeightPaper}>
                 <Chart />
               </Paper>
-            </Grid> */}
-
-            {/* Recent Deposits */}
-            {/* <Grid item xs={12} md={4} lg={3}>
-              <Paper className={fixedHeightPaper}>
-                <Deliveries />
-              </Paper>
-            </Grid> */}
-
-            {/* Recent Orders */}
-            {/* <Grid item xs={12}>
-              <Paper className={classes.paper}>
-                <Orders />
-              </Paper>
-            </Grid> */}
+            </Grid>
+            <Grid item xs={2} container spacing={1}>
+              <Paper>Packages Delivered</Paper>
+              <Paper>Packages Recieved</Paper>
+              <Paper>Suppliers Registerd</Paper>
+              <Paper>Average Delivery Time</Paper>
+              <Paper>Customer Satisfaction</Paper>
+            </Grid>
           </Grid>
-          {/* <Box pt={4}>
+
+          <Box pt={4}>
             <Copyright />
-          </Box> */}
+          </Box>
+
         </Container>
       </main>
     </div>
