@@ -1,13 +1,14 @@
+// Imports
 import React from 'react';
 import { createStyles, makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import logo from '../logo/gmLogo.png';
-// import IconButton from '@material-ui/core/IconButton';
-// import MenuIcon from '@material-ui/icons/Menu';
-// import Logo from '../../../public/gmLogo';
+import Button from '@material-ui/core/Button';
 
+
+// Styles
 const useStyles = makeStyles(() =>
   createStyles({
     root: {
@@ -21,7 +22,6 @@ const useStyles = makeStyles(() =>
 
     appBar: {
       backgroundColor: 'transparent',
-      // opacity: '90%',
       height: '50%',
     },
 
@@ -32,7 +32,7 @@ const useStyles = makeStyles(() =>
 
     headerText: {
       color: 'black',
-      fontSize: '18px',
+      fontSize: '15px',
       // fontFamily: 'Helvetica Neue',
     },
 
@@ -65,21 +65,13 @@ export default function Header() {
 
           <div className={classes.tabs}>
 
-            <Typography className={classes.headerText}>
-              About
-            </Typography>
+            <Button size="small" className={classes.headerText}>About</Button>
 
-            <Typography className={classes.headerText}>
-              Services
-            </Typography>
+            <Button size="small" className={classes.headerText}>About</Button>
+            <Button size="small" className={classes.headerText}>Services</Button>
+            <Button size="small" className={classes.headerText}>Contact</Button>
+            <Button size="small" className={classes.headerText}>Help</Button>
 
-            <Typography className={classes.headerText}>
-              Contact
-            </Typography>
-
-            <Typography className={classes.headerText}>
-              Help
-            </Typography>
           </div>
 
         </Toolbar>
