@@ -163,7 +163,9 @@ export default function Overview() {
           </IconButton>
         </div>
         <Divider />
+
         <List>{mainListItems}</List>
+      
       </Drawer>
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />

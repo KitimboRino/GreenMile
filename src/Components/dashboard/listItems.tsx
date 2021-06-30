@@ -13,12 +13,12 @@ import AssignmentOutlinedIcon from '@material-ui/icons/AssignmentOutlined';
 export const mainListItems = (
   <div>
     {/* Overview */}
-      <ListItem button>
-        <ListItemIcon>
-          <DashboardIcon />
-        </ListItemIcon>
-        <ListItemText primary='Overview' />
-      </ListItem>
+    <ListItem button>
+      <ListItemIcon>
+        <DashboardIcon />
+      </ListItemIcon>
+      <ListItemText primary='Overview' />
+    </ListItem>
 
     {/* Suppliers */}
     <ListItem button>
