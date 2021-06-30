@@ -11,10 +11,7 @@ import SettingsIcon from '@material-ui/icons/Settings';
 import AssignmentOutlinedIcon from '@material-ui/icons/AssignmentOutlined';
 import List from '@material-ui/core/List';
 
-import { BrowserRouter as Router, Link, } from "react-router-dom";
-
-
-
+import { BrowserRouter as Router, Link, } from 'react-router-dom';
 
 export default function MainListItems() {
   return (
@@ -22,7 +19,7 @@ export default function MainListItems() {
       <Router>
         <List>
           {/* Overview */}
-          <Link to="/overview">
+          <Link to='/overview'>
             <ListItem button>
               <ListItemIcon>
                 <DashboardIcon />

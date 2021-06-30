@@ -5,7 +5,7 @@ import React from 'react';
 import Overview from './pages/overview';
 import Suppliers from './pages/suppliers';
 // import Loaders from './pages/loaders';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 
 function App() {
@@ -13,9 +13,10 @@ function App() {
     <div>
       <Router>
         <Switch>
-          <Route path='/overview'>
+          <Route path='/'>
             <Overview />
           </Route>
+          
           <Route path='/suppliers'>
             <Suppliers />
           </Route>
