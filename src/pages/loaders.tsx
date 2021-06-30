@@ -24,7 +24,7 @@ import MainListItems from '../components/dashboard/listItems';
 import Button from '@material-ui/core/Button';
 // import Chart from './Chart';
 // import Deliveries from './Deliveries';
-import Orders from '../components/dashboard/Orders';
+import Orders from '../components/dashboard/orders';
 
 function Copyright() {
   return (
