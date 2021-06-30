@@ -11,67 +11,88 @@ import SettingsIcon from '@material-ui/icons/Settings';
 import AssignmentOutlinedIcon from '@material-ui/icons/AssignmentOutlined';
 import List from '@material-ui/core/List';
 
+import { BrowserRouter as Router, Link, } from "react-router-dom";
+
+
+
 
 export default function MainListItems() {
   return (
     <div>
-      <List>
-        {/* Overview */}
-        <ListItem button>
-          <ListItemIcon>
-            <DashboardIcon />
-          </ListItemIcon>
-          <ListItemText primary='Overview' />
-        </ListItem>
+      <Router>
+        <List>
+          {/* Overview */}
+          <Link to="/overview">
+            <ListItem button>
+              <ListItemIcon>
+                <DashboardIcon />
+              </ListItemIcon>
+              <ListItemText primary='Overview' />
+            </ListItem>
+          </Link>
 
-        {/* Suppliers */}
-        <ListItem button>
-          <ListItemIcon>
-            <ShoppingCartIcon />
-          </ListItemIcon>
-          <ListItemText primary='Suppliers' />
-        </ListItem>
+          {/* Suppliers */}
+          <Link to='/suppliers'>
+            <ListItem button>
+              <ListItemIcon>
+                <ShoppingCartIcon />
+              </ListItemIcon>
+              <ListItemText primary='Suppliers' />
+            </ListItem>
+          </Link>
 
-        {/* Loaders */}
-        <ListItem button>
-          <ListItemIcon>
-            <PeopleIcon />
-          </ListItemIcon>
-          <ListItemText primary='Loaders' />
-        </ListItem>
+          {/* Loaders */}
+          <Link to='/loaders'>
+            <ListItem button>
+              <ListItemIcon>
+                <PeopleIcon />
+              </ListItemIcon>
+              <ListItemText primary='Loaders' />
+            </ListItem>
+          </Link>
 
-        {/* Invoices */}
-        <ListItem button>
-          <ListItemIcon>
-            <BarChartIcon />
-          </ListItemIcon>
-          <ListItemText primary='Invoices' />
-        </ListItem>
+          {/* Invoices */}
+          <Link to='/invoices'>
+            <ListItem button>
+              <ListItemIcon>
+                <BarChartIcon />
+              </ListItemIcon>
+              <ListItemText primary='Invoices' />
+            </ListItem>
+          </Link>
 
-        {/* Activities */}
-        <ListItem button>
-          <ListItemIcon>
-            <LayersIcon />
-          </ListItemIcon>
-          <ListItemText primary='Activities' />
-        </ListItem>
+          {/* Activities */}
+          <Link to='/activites'>
+            <ListItem button>
+              <ListItemIcon>
+                <LayersIcon />
+              </ListItemIcon>
+              <ListItemText primary='Activities' />
+            </ListItem>
+          </Link>
 
-        {/* Articles */}
-        <ListItem button>
-          <ListItemIcon>
-            <AssignmentOutlinedIcon />
-          </ListItemIcon>
-          <ListItemText primary='Articles' />
-        </ListItem>
+          {/* Articles */}
+          <Link to='/articles'>
+            <ListItem button>
+              <ListItemIcon>
+                <AssignmentOutlinedIcon />
+              </ListItemIcon>
+              <ListItemText primary='Articles' />
+            </ListItem>
+          </Link>
 
-        {/* Settings */}
-        <ListItem button>
-          <ListItemIcon>
-            <SettingsIcon />
-          </ListItemIcon>
-          <ListItemText primary='Settings' />
-        </ListItem>
-      </List>
+          {/* Settings */}
+          <Link to='/settings'>
+            <ListItem button>
+              <ListItemIcon>
+                <SettingsIcon />
+              </ListItemIcon>
+              <ListItemText primary='Settings' />
+            </ListItem>
+          </Link>
+        </List>
+
+      </Router>
     </div>
   )
 }
