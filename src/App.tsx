@@ -13,10 +13,10 @@ function App() {
     <div>
       <Router>
         <Switch>
-          <Route path='/'>
+          <Route exact path='/overview'>
             <Overview />
           </Route>
-          
+
           <Route path='/suppliers'>
             <Suppliers />
           </Route>
