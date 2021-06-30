@@ -1,18 +1,16 @@
 import React from 'react';
 // import { Typography } from '@material-ui/core';
 // import SignInSide from './components/signIn/SignInSide';
-// import Dashboard from './components/dashboard/Dashboard';
-// import Header from './Components/header/Header';
 // import LandingPage from './pages/landingPage';
-import Overview from './pages/overview'
+import Overview from './pages/overview';
+// import Suppliers from './pages/suppliers';
+// import Loaders from './pages/loaders';
+// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
 
 function App() {
   return (
     <div>
-      {/* <SignInSide /> */}
-      {/* <Dashboard /> */}
-      {/* <LandingPage/> */}
-      {/* <Header /> */}
       <Overview />
     </div>
   );
