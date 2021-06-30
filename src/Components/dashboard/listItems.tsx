@@ -9,63 +9,69 @@ import BarChartIcon from '@material-ui/icons/BarChart';
 import LayersIcon from '@material-ui/icons/Layers';
 import SettingsIcon from '@material-ui/icons/Settings';
 import AssignmentOutlinedIcon from '@material-ui/icons/AssignmentOutlined';
+import List from '@material-ui/core/List';
 
-export const mainListItems = (
-  <div>
-    {/* Overview */}
-    <ListItem button>
-      <ListItemIcon>
-        <DashboardIcon />
-      </ListItemIcon>
-      <ListItemText primary='Overview' />
-    </ListItem>
 
-    {/* Suppliers */}
-    <ListItem button>
-      <ListItemIcon>
-        <ShoppingCartIcon />
-      </ListItemIcon>
-      <ListItemText primary='Suppliers' />
-    </ListItem>
+export default function MainListItems() {
+  return (
+    <div>
+      <List>
+        {/* Overview */}
+        <ListItem button>
+          <ListItemIcon>
+            <DashboardIcon />
+          </ListItemIcon>
+          <ListItemText primary='Overview' />
+        </ListItem>
 
-    {/* Loaders */}
-    <ListItem button>
-      <ListItemIcon>
-        <PeopleIcon />
-      </ListItemIcon>
-      <ListItemText primary='Loaders' />
-    </ListItem>
+        {/* Suppliers */}
+        <ListItem button>
+          <ListItemIcon>
+            <ShoppingCartIcon />
+          </ListItemIcon>
+          <ListItemText primary='Suppliers' />
+        </ListItem>
 
-    {/* Invoices */}
-    <ListItem button>
-      <ListItemIcon>
-        <BarChartIcon />
-      </ListItemIcon>
-      <ListItemText primary='Invoices' />
-    </ListItem>
+        {/* Loaders */}
+        <ListItem button>
+          <ListItemIcon>
+            <PeopleIcon />
+          </ListItemIcon>
+          <ListItemText primary='Loaders' />
+        </ListItem>
 
-    {/* Activities */}
-    <ListItem button>
-      <ListItemIcon>
-        <LayersIcon />
-      </ListItemIcon>
-      <ListItemText primary='Activities' />
-    </ListItem>
+        {/* Invoices */}
+        <ListItem button>
+          <ListItemIcon>
+            <BarChartIcon />
+          </ListItemIcon>
+          <ListItemText primary='Invoices' />
+        </ListItem>
 
-    {/* Articles */}
-    <ListItem button>
-      <ListItemIcon>
-        <AssignmentOutlinedIcon />
-      </ListItemIcon>
-      <ListItemText primary='Articles' />
-    </ListItem>
+        {/* Activities */}
+        <ListItem button>
+          <ListItemIcon>
+            <LayersIcon />
+          </ListItemIcon>
+          <ListItemText primary='Activities' />
+        </ListItem>
 
-    {/* Settings */}
-    <ListItem button>
-      <ListItemIcon>
-        <SettingsIcon />
-      </ListItemIcon>
-      <ListItemText primary='Settings' />
-    </ListItem>
-  </div>
-);
+        {/* Articles */}
+        <ListItem button>
+          <ListItemIcon>
+            <AssignmentOutlinedIcon />
+          </ListItemIcon>
+          <ListItemText primary='Articles' />
+        </ListItem>
+
+        {/* Settings */}
+        <ListItem button>
+          <ListItemIcon>
+            <SettingsIcon />
+          </ListItemIcon>
+          <ListItemText primary='Settings' />
+        </ListItem>
+      </List>
+    </div>
+  )
+}
