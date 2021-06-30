@@ -11,81 +11,81 @@ import SettingsIcon from '@material-ui/icons/Settings';
 import AssignmentOutlinedIcon from '@material-ui/icons/AssignmentOutlined';
 import List from '@material-ui/core/List';
 
-import { Link, } from 'react-router-dom';
+import { NavLink, } from 'react-router-dom';
 
 export default function MainListItems() {
   return (
     <div>
       <List>
         {/* Overview */}
-        <Link to='/overview'>
+        <NavLink to='/overview'>
           <ListItem button>
             <ListItemIcon>
               <DashboardIcon />
             </ListItemIcon>
             <ListItemText primary='Overview' />
           </ListItem>
-        </Link>
+        </NavLink>
 
         {/* Suppliers */}
-        <Link to='/suppliers'>
+        <NavLink to='/suppliers'>
           <ListItem button>
             <ListItemIcon>
               <ShoppingCartIcon />
             </ListItemIcon>
             <ListItemText primary='Suppliers' />
           </ListItem>
-        </Link>
+        </NavLink>
 
         {/* Loaders */}
-        <Link to='/loaders'>
+        <NavLink to='/loaders'>
           <ListItem button>
             <ListItemIcon>
               <PeopleIcon />
             </ListItemIcon>
             <ListItemText primary='Loaders' />
           </ListItem>
-        </Link>
+        </NavLink>
 
         {/* Invoices */}
-        <Link to='/invoices'>
+        <NavLink to='/invoices'>
           <ListItem button>
             <ListItemIcon>
               <BarChartIcon />
             </ListItemIcon>
             <ListItemText primary='Invoices' />
           </ListItem>
-        </Link>
+        </NavLink>
 
         {/* Activities */}
-        <Link to='/activites'>
+        <NavLink to='/activites'>
           <ListItem button>
             <ListItemIcon>
               <LayersIcon />
             </ListItemIcon>
             <ListItemText primary='Activities' />
           </ListItem>
-        </Link>
+        </NavLink>
 
         {/* Articles */}
-        <Link to='/articles'>
+        <NavLink to='/articles'>
           <ListItem button>
             <ListItemIcon>
               <AssignmentOutlinedIcon />
             </ListItemIcon>
             <ListItemText primary='Articles' />
           </ListItem>
-        </Link>
+        </NavLink>
 
         {/* Settings */}
-        <Link to='/settings'>
+        <NavLink to='/settings'>
           <ListItem button>
             <ListItemIcon>
               <SettingsIcon />
             </ListItemIcon>
             <ListItemText primary='Settings' />
           </ListItem>
-        </Link>
+        </NavLink>
       </List>
 
     </div>
