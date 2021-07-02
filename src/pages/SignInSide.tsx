@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -23,13 +23,10 @@ const useStyles = makeStyles(() => ({
   },
 
   image: {
-    // backgroundRepeat: 'no-repeat',
     backgroundColor: '#9AE265',
-    // backgroundSize: 'cover',
-    // backgroundPosition: 'center',
   },
 
-  img:{
+  img: {
     marginTop: '20%',
   },
 
@@ -59,36 +56,36 @@ const useStyles = makeStyles(() => ({
 export default function SignIn() {
   const classes = useStyles();
 
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  // const [email, setEmail] = useState('');
+  // const [password, setPassword] = useState('');
 
-  const getEmail = (event: any) => {
-    console.log(event, 'ëvent');
-    console.log(event.target, 'ëvent target');
+  // const getEmail = (event: any) => {
+  //   console.log(event, 'ëvent');
+  //   console.log(event.target, 'ëvent target');
 
-    setEmail(event.target.value);
-  }
+  //   setEmail(event.target.value);
+  // }
 
-  const getPassword = (event: any) => {
+  // const getPassword = (event: any) => {
 
-    setPassword(event.target.value);
+  //   setPassword(event.target.value);
 
-  };
+  // };
 
-  const submitData = (event: any) => {
+  // const submitData = (event: any) => {
 
-    // Prevents default behaviour of a form and allows to control it
-    event.preventDefault();
+  //   // Prevents default behaviour of a form and allows to control it
+  //   event.preventDefault();
 
-    // Storing the email and password in a variable/constant
-    const user = {
-      email: email,
-      password: password,
-    };
+  //   // Storing the email and password in a variable/constant
+  //   const user = {
+  //     email: email,
+  //     password: password,
+  //   };
 
-    console.log(user);
+  //   console.log(user);
 
-  };
+  // };
 
 
   return (
@@ -119,7 +116,7 @@ export default function SignIn() {
                 name='email'
                 autoComplete='email'
                 autoFocus
-                onChange={getEmail}
+                // onChange={getEmail}
               />
               <TextField
                 variant='outlined'
@@ -131,12 +128,13 @@ export default function SignIn() {
                 type='password'
                 id='password'
                 autoComplete='current-password'
-                onChange={getPassword}
+                // onChange={getPassword}
               />
               <FormControlLabel
                 control={<Checkbox value='remember' color='primary' />}
                 label='Remember me'
               />
+              
               <Button
                 type='submit'
                 fullWidth
