@@ -8,8 +8,9 @@ import Checkbox from '@material-ui/core/Checkbox';
 import Link from '@material-ui/core/Link';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
+import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
+
 import { makeStyles } from '@material-ui/core/styles';
 
 // Components
@@ -56,39 +57,7 @@ const useStyles = makeStyles(() => ({
 export default function SignIn() {
   const classes = useStyles();
 
-  // const [email, setEmail] = useState('');
-  // const [password, setPassword] = useState('');
-
-  // const getEmail = (event: any) => {
-  //   console.log(event, 'ëvent');
-  //   console.log(event.target, 'ëvent target');
-
-  //   setEmail(event.target.value);
-  // }
-
-  // const getPassword = (event: any) => {
-
-  //   setPassword(event.target.value);
-
-  // };
-
-  // const submitData = (event: any) => {
-
-  //   // Prevents default behaviour of a form and allows to control it
-  //   event.preventDefault();
-
-  //   // Storing the email and password in a variable/constant
-  //   const user = {
-  //     email: email,
-  //     password: password,
-  //   };
-
-  //   console.log(user);
-
-  // };
-
-
-  return (
+   return (
     <div>
       <Header />
 
