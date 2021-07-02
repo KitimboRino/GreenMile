@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -11,44 +11,85 @@ import Grid from '@material-ui/core/Grid';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
-import Header from '../header/Header';
-import Footer from '../footer/Footer';
 
-const useStyles = makeStyles((theme) => ({
+// Components
+import Header from '../components/header/Header';
+import Footer from '../components/footer/Footer';
+import Delivery from '../assets/img/delivery.svg';
+
+const useStyles = makeStyles(() => ({
   root: {
     height: '100vh',
   },
+
   image: {
-    backgroundImage: '',
-    backgroundRepeat: 'no-repeat',
-    backgroundColor:
-      theme.palette.type === 'light'
-        ? theme.palette.grey[50]
-        : theme.palette.grey[900],
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
+    // backgroundRepeat: 'no-repeat',
+    backgroundColor: '#9AE265',
+    // backgroundSize: 'cover',
+    // backgroundPosition: 'center',
   },
+
+  img:{
+    marginTop: '20%',
+  },
+
   paper: {
-    margin: theme.spacing(8, 4),
+    margin: 20,
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
   },
+
   avatar: {
-    margin: theme.spacing(1),
-    backgroundColor: theme.palette.secondary.main,
+    margin: 20,
+    backgroundColor: '#9AE265',
   },
+
   form: {
     width: '50%', // Fix IE 11 issue.
-    marginTop: theme.spacing(1),
+    marginTop: 20,
   },
+
   submit: {
-    margin: theme.spacing(3, 0, 2),
+    color: 'white',
+    backgroundColor: '#9AE265',
   },
 }));
 
-export default function SignInSide() {
+export default function SignIn() {
   const classes = useStyles();
+
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const getEmail = (event: any) => {
+    console.log(event, 'ëvent');
+    console.log(event.target, 'ëvent target');
+
+    setEmail(event.target.value);
+  }
+
+  const getPassword = (event: any) => {
+
+    setPassword(event.target.value);
+
+  };
+
+  const submitData = (event: any) => {
+
+    // Prevents default behaviour of a form and allows to control it
+    event.preventDefault();
+
+    // Storing the email and password in a variable/constant
+    const user = {
+      email: email,
+      password: password,
+    };
+
+    console.log(user);
+
+  };
+
 
   return (
     <div>
@@ -56,8 +97,10 @@ export default function SignInSide() {
 
       <Grid container component='main' className={classes.root}>
         <CssBaseline />
-        <Grid item xs={false} sm={4} md={7} className={classes.image} />
-        <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
+        <Grid item xs={8} className={classes.image} >
+          <img src={Delivery} className={classes.img} alt='' />
+        </Grid>
+        <Grid item xs={4} component={Paper} elevation={2} square>
           <div className={classes.paper}>
             <Avatar className={classes.avatar}>
               <LockOutlinedIcon />
@@ -76,6 +119,7 @@ export default function SignInSide() {
                 name='email'
                 autoComplete='email'
                 autoFocus
+                onChange={getEmail}
               />
               <TextField
                 variant='outlined'
@@ -87,6 +131,7 @@ export default function SignInSide() {
                 type='password'
                 id='password'
                 autoComplete='current-password'
+                onChange={getPassword}
               />
               <FormControlLabel
                 control={<Checkbox value='remember' color='primary' />}
@@ -96,7 +141,6 @@ export default function SignInSide() {
                 type='submit'
                 fullWidth
                 variant='contained'
-                color='primary'
                 className={classes.submit}
               >
                 Sign In
