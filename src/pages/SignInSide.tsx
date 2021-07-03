@@ -128,7 +128,6 @@ export default function SignIn() {
           </div>
         </Grid>
       </Grid>
-
       <Footer />
     </div>
   );
