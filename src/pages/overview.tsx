@@ -17,6 +17,8 @@ import Link from '@material-ui/core/Link';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
+
+// Imports
 import MainListItems from '../components/dashboard/listItems'
 import Chart from '../components/dashboard/chart';
 
@@ -33,15 +35,17 @@ function Copyright() {
   );
 }
 
-const drawerWidth = 240;
+const drawerWidth = 200;
 
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
   },
+
   toolbar: {
     paddingRight: 24, // keep right padding when drawer closed
   },
+
   toolbarIcon: {
     display: 'flex',
     alignItems: 'center',
@@ -56,7 +60,9 @@ const useStyles = makeStyles((theme) => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
+    backgroundColor: 'white',
   },
+
   appBarShift: {
     marginLeft: drawerWidth,
     width: `calc(100% - ${drawerWidth}px)`,
@@ -67,6 +73,10 @@ const useStyles = makeStyles((theme) => ({
   },
   menuButton: {
     marginRight: 36,
+    color: '#9AE265',
+  },
+  notificationsIcon: {
+    color: '#9AE265',
   },
   menuButtonHidden: {
     display: 'none',
@@ -113,11 +123,16 @@ const useStyles = makeStyles((theme) => ({
   fixedHeight: {
     height: 300,
   },
+
+
 }));
 
 export default function Overview() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
+
+  
+
   const handleDrawerOpen = () => {
     setOpen(true);
   };
@@ -140,7 +155,7 @@ export default function Overview() {
           >
             <MenuIcon />
           </IconButton>
-          <IconButton color="inherit">
+          <IconButton className={classes.notificationsIcon}>
             <Badge badgeContent={4} color="secondary">
               <NotificationsIcon />
             </Badge>
@@ -187,9 +202,10 @@ export default function Overview() {
           <Box pt={4}>
             <Copyright />
           </Box>
-
         </Container>
+
       </main>
-    </div>
+
+    </div >
   );
 }

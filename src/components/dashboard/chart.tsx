@@ -1,10 +1,10 @@
 import React from 'react';
 import { useTheme } from '@material-ui/core/styles';
-import { LineChart, Line, XAxis, YAxis, Label, ResponsiveContainer } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Label, ResponsiveContainer } from 'recharts';
 import Title from './title';
 
 // Generate Sales Data
-function createData(time:any, amount:any) {
+function createData(time: any, amount: any) {
   return { time, amount };
 }
 
@@ -36,17 +36,19 @@ export default function Chart() {
             left: 24,
           }}
         >
+          <CartesianGrid strokeDasharray='3 3' />
           <XAxis dataKey="time" stroke={theme.palette.text.secondary} />
           <YAxis stroke={theme.palette.text.secondary}>
+            <Tooltip />
             <Label
               angle={270}
               position="left"
               style={{ textAnchor: 'middle', fill: theme.palette.text.primary }}
             >
-              Sales ($)
+              Sales (Ushs)
             </Label>
           </YAxis>
-          <Line type="monotone" dataKey="amount" stroke={theme.palette.primary.main} dot={false} />
+          <Line type="monotone" dataKey="amount" stroke='#9AE265' activeDot={{ r: 8 }} />
         </LineChart>
       </ResponsiveContainer>
     </React.Fragment>

@@ -25,7 +25,7 @@ import Button from '@material-ui/core/Button';
 // import Chart from './Chart';
 // import Deliveries from './Deliveries';
 import Orders from '../components/dashboard/orders';
-// import AddSupplier from './addSuppliers';
+import PopSupplier from '../components/modal/PopSupplier';
 
 function Copyright() {
   return (
@@ -125,6 +125,8 @@ const useStyles = makeStyles((theme) => ({
 export default function Suppliers() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
+
+
   const handleDrawerOpen = () => {
     setOpen(true);
   };
@@ -174,7 +176,14 @@ export default function Suppliers() {
         <Container maxWidth="lg" className={classes.container}>
           <Grid container spacing={3}>
 
-            <Button>Add a Supplier</Button>
+            {/* Modal */}
+            <Button onClick={() => setOpen(true)}>Add a Supplier</Button>
+            <PopSupplier
+              open={open}
+              onSubmit={() => console.log("submit")}
+              onClose={() => setOpen(false)}
+            />
+
             {/* Recent Orders */}
             <Grid item xs={12}>
               <Paper className={classes.paper}>
