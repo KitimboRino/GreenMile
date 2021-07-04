@@ -124,28 +124,29 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Suppliers() {
   const classes = useStyles();
-  const [open, setOpen] = React.useState(true);
+  const [openDrawer, setOpenDrawer] = React.useState(true);
+  const [open, setOpen] = React.useState(false);
 
 
   const handleDrawerOpen = () => {
-    setOpen(true);
+    setOpenDrawer(true);
   };
   const handleDrawerClose = () => {
-    setOpen(false);
+    setOpenDrawer(false);
   };
   // const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
 
   return (
     <div className={classes.root}>
       <CssBaseline />
-      <AppBar position="absolute" className={clsx(classes.appBar, open && classes.appBarShift)}>
+      <AppBar position="absolute" className={clsx(classes.appBar, openDrawer && classes.appBarShift)}>
         <Toolbar className={classes.toolbar}>
           <IconButton
             edge="start"
             color="inherit"
             aria-label="open drawer"
             onClick={handleDrawerOpen}
-            className={clsx(classes.menuButton, open && classes.menuButtonHidden)}
+            className={clsx(classes.menuButton, openDrawer && classes.menuButtonHidden)}
           >
             <MenuIcon />
           </IconButton>
@@ -159,9 +160,9 @@ export default function Suppliers() {
       <Drawer
         variant="permanent"
         classes={{
-          paper: clsx(classes.drawerPaper, !open && classes.drawerPaperClose),
+          paper: clsx(classes.drawerPaper, !openDrawer && classes.drawerPaperClose),
         }}
-        open={open}
+        open={openDrawer}
       >
         <div className={classes.toolbarIcon}>
           <IconButton onClick={handleDrawerClose}>
