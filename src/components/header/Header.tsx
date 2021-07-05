@@ -20,7 +20,7 @@ const useStyles = makeStyles(() =>
     },
 
     appBar: {
-      backgroundColor: 'transparent',
+      backgroundColor: '#F2F2F2',
       height: '50%',
     },
 

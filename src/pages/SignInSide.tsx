@@ -10,7 +10,7 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
-
+import { useHistory } from "react-router-dom";
 import { makeStyles } from '@material-ui/core/styles';
 
 // Components
@@ -55,9 +55,18 @@ const useStyles = makeStyles(() => ({
 }));
 
 export default function SignIn() {
+
+  let history = useHistory();
+
+  function handleClick() {
+    history.push('/overview');
+  }
+
+
+
   const classes = useStyles();
 
-   return (
+  return (
     <div>
       <Header />
 
@@ -85,7 +94,7 @@ export default function SignIn() {
                 name='email'
                 autoComplete='email'
                 autoFocus
-                // onChange={getEmail}
+              // onChange={getEmail}
               />
               <TextField
                 variant='outlined'
@@ -97,15 +106,16 @@ export default function SignIn() {
                 type='password'
                 id='password'
                 autoComplete='current-password'
-                // onChange={getPassword}
+              // onChange={getPassword}
               />
               <FormControlLabel
                 control={<Checkbox value='remember' color='primary' />}
                 label='Remember me'
               />
-              
+
               <Button
                 type='submit'
+                onClick={handleClick}
                 fullWidth
                 variant='contained'
                 className={classes.submit}

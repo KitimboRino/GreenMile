@@ -40,7 +40,7 @@ function Copyright() {
   );
 }
 
-const drawerWidth = 240;
+const drawerWidth = 200;
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -63,6 +63,7 @@ const useStyles = makeStyles((theme) => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
+    backgroundColor: '#F2F2F2',
   },
   appBarShift: {
     marginLeft: drawerWidth,
@@ -72,15 +73,24 @@ const useStyles = makeStyles((theme) => ({
       duration: theme.transitions.duration.enteringScreen,
     }),
   },
+
   menuButton: {
     marginRight: 36,
+    color: '#9AE265',
   },
+
   menuButtonHidden: {
     display: 'none',
   },
+
+  notificationsIcon: {
+    color: '#9AE265',
+  },
+
   title: {
     flexGrow: 1,
   },
+
   drawerPaper: {
     position: 'relative',
     whiteSpace: 'nowrap',
@@ -150,7 +160,7 @@ export default function Suppliers() {
           >
             <MenuIcon />
           </IconButton>
-          <IconButton color="inherit">
+          <IconButton className={classes.notificationsIcon}>
             <Badge badgeContent={4} color="secondary">
               <NotificationsIcon />
             </Badge>

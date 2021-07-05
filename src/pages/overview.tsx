@@ -44,6 +44,7 @@ const useStyles = makeStyles((theme) => ({
 
   toolbar: {
     paddingRight: 24, // keep right padding when drawer closed
+    color: '#F2F2F2',
   },
 
   toolbarIcon: {
@@ -60,7 +61,7 @@ const useStyles = makeStyles((theme) => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
-    backgroundColor: 'white',
+    backgroundColor: '#F2F2F2',
   },
 
   appBarShift: {
@@ -75,12 +76,15 @@ const useStyles = makeStyles((theme) => ({
     marginRight: 36,
     color: '#9AE265',
   },
-  notificationsIcon: {
-    color: '#9AE265',
-  },
+
   menuButtonHidden: {
     display: 'none',
   },
+
+  notificationsIcon: {
+    color: '#9AE265',
+  },
+
   title: {
     flexGrow: 1,
   },
@@ -131,7 +135,7 @@ export default function Overview() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
 
-  
+
 
   const handleDrawerOpen = () => {
     setOpen(true);

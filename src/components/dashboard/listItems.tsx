@@ -1,4 +1,5 @@
 import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
@@ -13,12 +14,22 @@ import List from '@material-ui/core/List';
 
 import { NavLink, } from 'react-router-dom';
 
+
+const useStyles = makeStyles(() => ({
+  Links: {
+    textDecoration: 'none',
+    color: 'black',
+  },
+}));
+
 export default function MainListItems() {
+  const classes = useStyles();
+
   return (
     <div>
       <List>
         {/* Overview */}
-        <NavLink to='/overview'>
+        <NavLink to='/overview' className={classes.Links}>
           <ListItem button>
             <ListItemIcon>
               <DashboardIcon />
@@ -28,7 +39,7 @@ export default function MainListItems() {
         </NavLink>
 
         {/* Suppliers */}
-        <NavLink to='/suppliers'>
+        <NavLink to='/suppliers' className={classes.Links}>
           <ListItem button>
             <ListItemIcon>
               <ShoppingCartIcon />
@@ -38,7 +49,7 @@ export default function MainListItems() {
         </NavLink>
 
         {/* Loaders */}
-        <NavLink to='/loaders'>
+        <NavLink to='/loaders' className={classes.Links}>
           <ListItem button>
             <ListItemIcon>
               <PeopleIcon />
@@ -48,7 +59,7 @@ export default function MainListItems() {
         </NavLink>
 
         {/* Invoices */}
-        <NavLink to='/invoices'>
+        <NavLink to='/invoices' className={classes.Links}>
           <ListItem button>
             <ListItemIcon>
               <BarChartIcon />
@@ -58,7 +69,7 @@ export default function MainListItems() {
         </NavLink>
 
         {/* Activities */}
-        <NavLink to='/activites'>
+        <NavLink to='/activites' className={classes.Links}>
           <ListItem button>
             <ListItemIcon>
               <LayersIcon />
@@ -68,7 +79,7 @@ export default function MainListItems() {
         </NavLink>
 
         {/* Articles */}
-        <NavLink to='/articles'>
+        <NavLink to='/articles' className={classes.Links}>
           <ListItem button>
             <ListItemIcon>
               <AssignmentOutlinedIcon />
@@ -78,7 +89,7 @@ export default function MainListItems() {
         </NavLink>
 
         {/* Settings */}
-        <NavLink to='/settings'>
+        <NavLink to='/settings' className={classes.Links}>
           <ListItem button>
             <ListItemIcon>
               <SettingsIcon />
